@@ -12,7 +12,14 @@ Before starting this epic App please make sure you have the following installed 
 
 ## Development / Start the server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Mit IntelliJ:
+
+1. Npm scripts
+2. Rechtsklick auf package.json 
+3. show npm scripts
+4. start: startet die Anwendung 
+5. Test: startet die Tests
+
 
 ## Code scaffolding
 
