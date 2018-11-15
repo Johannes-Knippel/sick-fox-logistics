@@ -1,0 +1,23 @@
+
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+]
+-src/main/java/hm/edu/tracking/CORSFilter.java,4/f/4f80f1e699afe3339c06035d29543579f7993b61
+e
+5src/main/java/hm/edu/tracking/JAXRSConfiguration.java,2/8/285a365311963d119c0a677e425d0edc3431e9e4
+I
+src/main/webapp/index.jsp,8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded
+Q
+!src/main/webapp/WEB-INF/beans.xml,8/3/83008b1a88ba03a2548bb5b9ad0768c6c307d36c
+o
+?src/main/java/hm/edu/tracking/microservice/boundary/Probes.java,9/8/98cbe75a2e05d643210cdca9119f873b0c0f8600
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+n
+>src/main/java/hm/edu/tracking/books/entity/SenseitMessage.java,4/b/4b297732acbf4cac4443e648ef1d5a5a756514f9
+k
+;src/main/java/hm/edu/tracking/books/boundary/SensitApi.java,e/5/e53b594a67abd89dc432882a379ceb4b513a561e
+m
+=src/main/java/hm/edu/tracking/books/boundary/SenseItRepo.java,2/e/2ea840c07acb927b327404ced01fe42b492b2c8b
+>
+buildAndRun.sh,e/9/e925b2425b0491ea459f3d773e14c177989e8147

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <persistence-unit name="db" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <!-- shouldn't be valid for java SE per specification, but it works for EclipseLink ... -->
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <!--<property name="eclipselink.canonicalmodel.subpackage" value="test"/>-->
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:./bookstore;create=true"/>
+            <property name="javax.persistence.jdbc.user" value="test"/>
+            <property name="javax.persistence.jdbc.password" value="test"/>
+
+            <!-- EclipseLink should create the database schema automatically -->
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="create-or-extend-tables"/>-->
+            <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
+            <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
+            <property name="javax.persistence.sql-load-script-source" value="META-INF/load_script.sql"/>
+            <!--<property name="eclipselink.ddl-generation.output-mode" value="both"/>
+            <property name="eclipselink.application-location" value="/Users/q253514/Downloads/dev/bookstore"/>-->
+            <!--<property name="eclipselink.logging.level" value="FINE"/>-->
+            <property name="eclipselink.logging.parameters" value="true"/>
+            <property name="eclipselink.persistence-context.flush-mode" value="auto"/>
+        </properties>
+    </persistence-unit>
+
+<!--
+    <persistence-unit name="db" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>jdbc/db</jta-data-source>
+        &lt;!&ndash; shouldn't be valid for java SE per specification, but it works for EclipseLink ... &ndash;&gt;
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <properties>
+            <property name="eclipselink.canonicalmodel.subpackage" value="prod"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            &lt;!&ndash;<property name="eclipselink.ddl-generation.output-mode" value="both"/>
+            <property name="eclipselink.application-location" value="/Users/q253514/Downloads/dev"/>&ndash;&gt;
+            <property name="eclipselink.flush-clear.cache" value="Merge"/>
+            &lt;!&ndash;<property name="eclipselink.logging.level" value="ALL"/>&ndash;&gt;
+            <property name="eclipselink.target-database" value="PostgreSQL"/>
+        </properties>
+    </persistence-unit>
+-->
+
+</persistence>

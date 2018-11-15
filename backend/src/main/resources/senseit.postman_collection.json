@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "3144678f-459e-443e-a4e9-b9c453159628",
+		"name": "senseit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST senseit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"humidity\": 40.2,\n\t\"latitude\": \"11.5525109\",\n\t\"longitude\": \"48.1514877\",\n\t\"name\": \"TestSensor01\",\n\t\"temperature\": 3.5,\n\t\"eventtimestamp\": \"2018-11-15T16:33:39.668Z[UTC]\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tracking/api/senseit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracking",
+						"api",
+						"senseit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/tracking/api/senseit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracking",
+						"api",
+						"senseit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET per Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/tracking/api/senseit/SenseIt02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracking",
+						"api",
+						"senseit",
+						"SenseIt02"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET per ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/tracking/api/senseit/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracking",
+						"api",
+						"senseit",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE per ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/tracking/api/senseit/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tracking",
+						"api",
+						"senseit",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
