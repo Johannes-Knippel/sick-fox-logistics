@@ -17,14 +17,16 @@ export class AppComponent implements OnInit {
   public mapElement: ElementRef;
 
   public constructor() {
-    this.query = "starbucks";
+    this.query = "Starbucks";
     this.platform = new H.service.Platform({
       "app_id": "mYrOKG6Y0liojLdg0hvQ",
       "app_code": "At7q4TCeCI6BXaEWXk7Ksw"
     });
   }
 
-  public ngOnInit() { }
+  public ngOnInit() {
+    console.log("Geeezosss");
+  }
 
   public ngAfterViewInit() {
     let defaultLayers = this.platform.createDefaultLayers();

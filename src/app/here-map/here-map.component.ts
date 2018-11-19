@@ -36,8 +36,15 @@ export class HereMapComponent implements OnInit {
   private ui: any;
   private search: any;
 
+  public positionsLat: any[];
+  public positionsLng: any[];
+  public sensor: any;
+
   public constructor() { }
 
+  /*
+  * Initialization
+  * */
   public ngOnInit() {
     this.platform = new H.service.Platform({
       "app_id": this.appId,
@@ -47,10 +54,6 @@ export class HereMapComponent implements OnInit {
   }
 
   public ngAfterViewInit() {
-    let platform = new H.service.Platform({
-      "app_id": this.appId,
-      "app_code": this.appCode
-    });
     let defaultLayers = this.platform.createDefaultLayers();
     this.map = new H.Map(
       this.mapElement.nativeElement,
@@ -64,6 +67,10 @@ export class HereMapComponent implements OnInit {
     this.ui = H.ui.UI.createDefault(this.map, defaultLayers);
   }
 
+  /*
+  * Generate Search results and drop Markers at answered positions from API
+  * Search request is only for the preset region in app.component.ts
+  * */
   public places(query: string) {
     this.map.removeObjects(this.map.getObjects());
     this.search.request({ "q": query, "at": this.lat + "," + this.lng }, {}, data => {
@@ -75,6 +82,21 @@ export class HereMapComponent implements OnInit {
     });
   }
 
+  /*
+  * Example function for random positions eg. the senseit Sensor*/
+  public positionSens() {
+    console.log("Button has been clicked");
+    this.sensor = "Sensit01";
+    this.positionsLat = [11.5525109, 11.5516490, 11.3917690, 11.3039110, 11.2482980];
+    this.positionsLng = [48.1514877, 48.1862590, 48.2079030, 48.2555090, 48.2901800];
+    for(let i = 0; i < this.positionsLng.length; i++) {
+      this.dropMarker({"lat": this.positionsLat[i], "lng": this.positionsLng[i]}, this.sensor);
+    }
+  }
+
+  /*
+  * Generate the actual Marker
+  * */
   private dropMarker(coordinates: any, data: any) {
     let marker = new H.map.Marker(coordinates);
     marker.setData("<p>" + data.title + "<br>" + data.vicinity + "</p>");
