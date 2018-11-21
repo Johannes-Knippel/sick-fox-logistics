@@ -116,7 +116,6 @@ export class HereMapComponent implements OnInit {
 
   }
 
-
   /*
   * Generate the actual Marker
   * */
