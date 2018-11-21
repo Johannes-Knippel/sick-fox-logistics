@@ -12,12 +12,16 @@ export class AppComponent implements OnInit {
 
   private platform: any;
   public query: string;
+  public sens01: string;
+  public sens02: string;
 
   @ViewChild("map")
   public mapElement: ElementRef;
 
   public constructor() {
     this.query = "Starbucks";
+    this.sens01 = "sens01";
+    this.sens02 = "sens02";
     this.platform = new H.service.Platform({
       "app_id": "mYrOKG6Y0liojLdg0hvQ",
       "app_code": "At7q4TCeCI6BXaEWXk7Ksw"

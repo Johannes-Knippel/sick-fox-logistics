@@ -9,7 +9,10 @@
 <div style="padding: 10px 0">
   <input type="text" placeholder="Search places..." [(ngModel)]="query" />
   <!-- <button (click)="map.places(query)">Search</button> -->
-  <button (click)="map.positionSens()">Search</button>
+  <button (click)="map.positionSens(sens01)">Show Sensit01</button>
+  <button (click)="map.positionSens(sens02)">Show Sensit02</button>
+  <button (click)="map.deleteMarkers()">Delete Markers</button>
+
 </div>
 <here-map #map appId="mYrOKG6Y0liojLdg0hvQ" appCode="At7q4TCeCI6BXaEWXk7Ksw" lat="48.1372257" lng="11.5753994" width="100%" height="600px"></here-map>
 
