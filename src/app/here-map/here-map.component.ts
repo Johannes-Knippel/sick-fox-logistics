@@ -76,6 +76,7 @@ export class HereMapComponent implements OnInit {
     this.search.request({ "q": query, "at": this.lat + "," + this.lng }, {}, data => {
       for(let i = 0; i < data.results.items.length; i++) {
         this.dropMarker({ "lat": data.results.items[i].position[0], "lng": data.results.items[i].position[1] }, data.results.items[i]);
+        console.log("lat: " + data.results.items[i].position[0]);
       }
     }, error => {
       console.error(error);
@@ -83,12 +84,13 @@ export class HereMapComponent implements OnInit {
   }
 
   /*
-  * Example function for random positions eg. the senseit Sensor*/
+  * Example function for random positions eg. the senseit Sensor
+  * */
   public positionSens() {
     console.log("Button has been clicked");
     this.sensor = "Sensit01";
-    this.positionsLat = [11.5525109, 11.5516490, 11.3917690, 11.3039110, 11.2482980];
-    this.positionsLng = [48.1514877, 48.1862590, 48.2079030, 48.2555090, 48.2901800];
+    this.positionsLng = [11.5525109, 11.5516490, 11.3917690, 11.3039110, 11.2482980];
+    this.positionsLat = [48.1514877, 48.1862590, 48.2079030, 48.2555090, 48.2901800];
     for(let i = 0; i < this.positionsLng.length; i++) {
       this.dropMarker({"lat": this.positionsLat[i], "lng": this.positionsLng[i]}, this.sensor);
     }

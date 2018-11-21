@@ -24,9 +24,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  public ngOnInit() {
-    console.log("Geeezosss");
-  }
+  public ngOnInit() {  }
 
   public ngAfterViewInit() {
     let defaultLayers = this.platform.createDefaultLayers();
