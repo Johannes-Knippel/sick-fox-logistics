@@ -37,3 +37,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+*.class
+backend/target/classes/
+backend/target/generated-sources/
+backend/target/maven-archiver/
+backend/target/maven-status/
+backend/target/tracking/
