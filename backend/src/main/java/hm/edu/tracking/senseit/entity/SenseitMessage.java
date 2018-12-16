@@ -35,5 +35,6 @@ public class SenseitMessage {
     private String latitude;
     private Double temperature;
     private Double humidity;
+    private int vibrationCount;
 
 }
